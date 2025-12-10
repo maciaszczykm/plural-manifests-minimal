@@ -1,0 +1,19 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: ServiceDeployment
+metadata:
+  name: test-cert-manager
+spec:
+  namespace: cert-manager
+  helm:
+    url: https://charts.jetstack.io
+    version: 1.19.2
+    chart: cert-manager
+  values:
+    installCRDs: true
+  clusterRef:
+    kind: Cluster
+    name: target-cluster-minimal
+    namespace: default
+  reconciliation:
+    driftDetection: true
+    interval: 30s
