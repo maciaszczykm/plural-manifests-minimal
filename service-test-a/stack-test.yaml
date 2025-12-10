@@ -1,28 +1,28 @@
-apiVersion: deployments.plural.sh/v1alpha1
-kind: GitRepository
-metadata:
-  name: tf-test
-  namespace: default
-spec:
-  url: https://github.com/floreks/tf-test.git
----
-apiVersion: deployments.plural.sh/v1alpha1
-kind: InfrastructureStack
-metadata:
-  name: test
-  namespace: default
-spec:
-  name: "test-job"
-  type: TERRAFORM
-  repositoryRef:
-    name: tf-test
-    namespace: default
-  clusterRef:
-    name: target-cluster-minimal
-    namespace: default
-  git:
-    ref: main
-    folder: terraform/long
-  reconciliation:
-    driftDetection: true
-    interval: 30s
+#apiVersion: deployments.plural.sh/v1alpha1
+#kind: GitRepository
+#metadata:
+#  name: tf-test
+#  namespace: default
+#spec:
+#  url: https://github.com/floreks/tf-test.git
+#---
+#apiVersion: deployments.plural.sh/v1alpha1
+#kind: InfrastructureStack
+#metadata:
+#  name: test
+#  namespace: default
+#spec:
+#  name: "test-job"
+#  type: TERRAFORM
+#  repositoryRef:
+#    name: tf-test
+#    namespace: default
+#  clusterRef:
+#    name: target-cluster-minimal
+#    namespace: default
+#  git:
+#    ref: main
+#    folder: terraform/long
+#  reconciliation:
+#    driftDetection: true
+#    interval: 30s
