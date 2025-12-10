@@ -9,7 +9,7 @@ spec:
     ref: main
   repositoryRef:
     kind: GitRepository
-    name: plural-manifests
+    name: plural-manifests-minimal
   clusterRef:
     kind: Cluster
     name: target-cluster-minimal
