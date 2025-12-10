@@ -1,0 +1,7 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: Cluster
+metadata:
+  name: target-cluster-minimal
+  namespace: default
+spec:
+  handle: marcin
