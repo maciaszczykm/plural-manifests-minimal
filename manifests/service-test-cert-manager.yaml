@@ -8,8 +8,8 @@ spec:
     url: https://charts.jetstack.io
     version: 1.19.2
     chart: cert-manager
-  values:
-    installCRDs: true
+    values:
+      installCRDs: true
   clusterRef:
     kind: Cluster
     name: target-cluster-minimal
