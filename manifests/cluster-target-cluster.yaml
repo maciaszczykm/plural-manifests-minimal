@@ -4,4 +4,4 @@ metadata:
   name: target-cluster-minimal
   namespace: default
 spec:
-  handle: marcin
+  handle: marcin # Do not deploy on mgmt cluster as cert-manager is one of the services.
