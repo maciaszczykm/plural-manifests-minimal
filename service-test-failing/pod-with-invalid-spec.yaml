@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-invalid-spec
+spec:
+  containers:
+    - name: app
+      image: busybox
+      commnd: ["sleep", "3600"]
